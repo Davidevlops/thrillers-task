@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   return (
     <div className='my-container my-bg'>
-      <div className='grid grid-cols-6 '>
+      <div className='grid  grid-cols-1 lg:grid-cols-6'>
         <Sidebar />
         <Main />
       </div>

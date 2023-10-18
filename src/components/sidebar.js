@@ -7,23 +7,31 @@ import { PiCirclesFourBold } from "react-icons/pi"
 import { RiSettingsLine } from "react-icons/ri"
 import { RiHome5Fill } from "react-icons/ri"
 import { RiLogoutCircleRLine } from "react-icons/ri"
+import { MdCancel } from "react-icons/md"
 
-const Sidebar = () => {
+const Sidebar = ({ hamburgerMenu, setHamburgerMenu }) => {
+  const handleCancelButton = () => {
+    setHamburgerMenu(!hamburgerMenu)
+  }
   // bg-gray-300
   // bg-white
+  // ${hamburgerMenu ? "hidden " : ""}
   return (
-    <div className="col-span-1 bg-white p-2 rounded-tl-xl rounded-bl-xl">
-      <h2 className="font-bold text-2xl text-center py-4">
+    <div className={`${hamburgerMenu ? "flex fullscreen" : "hidden"}  md:hidden lg:flex flex-col lg:col-span-1 bg-white p-2 rounded-tl-xl rounded-bl-xl`}>
+      <div className={`lg:hidden absolute flex justify-end `}>
+        <MdCancel onClick={handleCancelButton} className='text-2x' />
+      </div>
+      <h2 className="flex font-bold text-2xl py-4 justify-center">
         Mima<span className="my-bg-gray">Booking</span>
       </h2>
-      <div className="flex flex-col mt-4 items-center py-2">
+      <div className="md:flex flex-col mt-4 items-center py-2">
         <div className='flex items-end justify-center'>
           <img className="rounded-full p-1 object-cover border border-gray-500 w-24 h-24" src={img} alt="lady" />
           <div className='absolute border border- bg-purple rounded-full p-2 font-light '>
             <BsPencilSquare className='text-white text-xl font-light ' />
           </div>
         </div>
-        <p className="my-bg-gray text-xl mt-2">ilia jan</p>
+        <p className="my-bg-gray text-center text-xl mt-2">ilia jan</p>
       </div>
       <ul className="flex flex-col py-10 mx-8">
         <li className="flex py-3">
@@ -46,8 +54,6 @@ const Sidebar = () => {
         <RiLogoutCircleRLine className="mt-1 mr-6" /> Logout
       </p>
     </div>
-
-
   )
 }
 

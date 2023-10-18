@@ -10,7 +10,7 @@ const BestCard = ({ imageUrl, location, price, title, per }) => {
                 <h2 className="text-base font-bold text-gray-800">{title}</h2>
                 <div className='flex gap-2'>
                     <CiLocationOn className='mt-3' />
-                    <p className="text-gray-500 opacity-50 mt-2"> {location}</p>
+                    <p className="text-gray-500 opacity-50 mt-2 text-sm whitespace-nowrap"> {location}</p>
                 </div>
             </div>
             <div className="flex px-2 py-1 justify-between">

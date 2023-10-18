@@ -14,11 +14,9 @@ const TrendingHero = () => {
                 <div className='flex gap-4'>
                     <div className='bg-white p-1 rounded-xl border border-black'> <MdOutlineArrowLeft className='text-xl' /></div>
                     <div className='bg-purple p-1 rounded-xl border'> <MdOutlineArrowRight className='text-xl text-white' /></div>
-
-
                 </div>
             </div>
-            <div className="flex mt-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4 gap-8">
                 <TrendingCard
                     imageUrl={mon}
                     title="Montmartre, France"
