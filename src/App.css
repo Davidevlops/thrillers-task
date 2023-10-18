@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.my-bg-gray {
+    color: #6c6c6c;
+}
+
+.my-bg {
+    background-color: #f9f9f9;
+}
+
+.bg-purple {
+    background-color: #504c74;
+}
